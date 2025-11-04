@@ -1,4 +1,4 @@
-package com.example.nullnull
+package com.example.nullnull.component
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -6,12 +6,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun TextComponent(){
-    Text(text = "Compose", color = Color.White)
+fun TextComponentIdx(
+    idx: Int
+){
+    Text(text = "Compose$idx", color = Color.White)
 }
 
 @Preview
 @Composable
-private fun TextComponentPreview() {
-    TextComponent()
+private fun TextComponentIdxPreview() {
+    TextComponentIdx(0)
 }
