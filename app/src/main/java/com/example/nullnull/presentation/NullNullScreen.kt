@@ -29,7 +29,7 @@ import com.example.nullnull.component.TextComponentIdx
 
 @Composable
 fun NullNullScreen(
-    navigateToStore: () -> Unit
+    // TODO navigateToStore 파라미터 추가
 ) {
     val context = LocalContext.current
     var imageState by remember { mutableIntStateOf(R.drawable.ic_tj_old) }
@@ -82,7 +82,9 @@ fun NullNullScreen(
         }
 
         Button(
-            onClick = navigateToStore
+            onClick = {
+                // TODO StoreScreen으로 이동
+            }
         ) {
             Text("족발/보쌈 리스트")
         }
@@ -105,5 +107,5 @@ fun NullNullScreen(
 @Preview
 @Composable
 fun NullNullScreenPreview() {
-    NullNullScreen({})
+    NullNullScreen()
 }

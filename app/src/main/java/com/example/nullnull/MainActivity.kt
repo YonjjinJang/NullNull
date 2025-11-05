@@ -7,10 +7,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.example.nullnull.presentation.StoreScreen
 import com.example.nullnull.presentation.NullNullScreen
 import com.example.nullnull.presentation.ScreenState
 import com.example.nullnull.presentation.SplashScreen
+import com.example.nullnull.presentation.StoreScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
 
                 is ScreenState.NullNul -> {
                     NullNullScreen(
-                        navigateToStore = { currentScreenState = ScreenState.NullNul }
+                        // TODO navigateToMeatScreen 람다 함수 구현
                     )
                 }
 

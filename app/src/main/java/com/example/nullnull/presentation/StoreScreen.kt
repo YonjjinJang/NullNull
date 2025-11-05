@@ -2,25 +2,18 @@ package com.example.nullnull.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.nullnull.component.StoreTopBar
-import com.example.nullnull.component.StoreItem
 
 @Composable
 fun StoreScreen(modifier: Modifier = Modifier) {
     Scaffold(
         // TODO topBar에 StoreTopBar 호출
-        topBar = {
-            StoreTopBar(modifier = Modifier.fillMaxWidth())
-        }
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
@@ -29,9 +22,6 @@ fun StoreScreen(modifier: Modifier = Modifier) {
                 .background(color = Color.Black)
         ) {
             // TODO item에 StoreItem 호출
-            items(stores) { store ->
-                StoreItem(store)
-            }
         }
     }
 }
